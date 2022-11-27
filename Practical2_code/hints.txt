@@ -1,0 +1,16 @@
+// do your own cool GA here
+		/**
+		 * Some general programming remarks and hints:
+		 * - A crucial point is to set each individual's fitness (by the setFitness() method) before sorting. When is an individual fit? 
+		 * 	How do you encode that into a double (between 0 and 1)?
+		 * - Decide when to stop, that is: when the algorithm has converged. And make sure you  terminate your loop when it does.
+		 * - print the whole population after convergence and print the number of generations it took to converge.
+		 * - print lots of output (especially if things go wrong).
+		 * - work in an orderly and structured fashion (use tabs, use methods,..)
+		 * - DONT'T make everything private. This will only complicate things. Keep variables local if possible
+		 * - A common error are mistakes against pass-by-reference (this means that you pass the 
+		 * 	address of an object, not a copy of the object to the method). There is a deepclone method included in the
+		 *  Individual class.Use it!
+		 * - You can compare your chromosome and your target string, using for eg. TARGET.charAt(i) == ...
+		 * - Check your integers and doubles (eg. don't use ints for double divisions).
+		 */

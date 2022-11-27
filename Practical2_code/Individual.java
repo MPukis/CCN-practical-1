@@ -25,6 +25,9 @@ public class Individual {
 	public void setFitness(double fitness) {
 		this.fitness = fitness;
 	}
+	public void calculateFittnes(Individual ind){
+		//TODO
+	}
 	
 	public String genoToPhenotype() {
 		StringBuilder builder = new StringBuilder();
