@@ -29,14 +29,24 @@ public class Practical2 {
 		alphabet[26] = ' ';
 		//----------------------------------------------
 		//actual code
-
+		
+		//while loop?
+		// code bellow sholud be an else statement because population initialization only happens once  
 		Population population1= new Population(popSize);
 		population1.initialize();
 		// What does your population look like?
 		for (int i = 0; i < population1.populationSize(); i++) {
 			System.out.println(population1.population[i].genoToPhenotype());
 		}
-		// What would happen imho
+		/**  What would happen imho
+		 * 
+		 * what do we have(up until this point)----> population with certain fittnes values
+		 * selection()
+		 * crossover()
+		 * mutation() <-maybe should be included in the crossover method
+		 * reproduction()<- I have no idea how we gona do this
+		 * loop starts again
+		 */
 		
 	}
 }
