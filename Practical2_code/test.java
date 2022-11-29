@@ -23,10 +23,13 @@ public class test {
     //   PrintWriter pw = new PrintWriter(file);
     //   pw.println("xdddddd");
     //   pw.close();
-
-    double b= (100.0/11.0)/100.0;
-
-    System.out.println(b);
+    double min=0.00;
+    double max= 1.00;
+    double chance=min+(Math.random()*((max-min)+1));
+    for (int i = 0; i < 100; i++) {
       
+    
+    System.out.println(Math.random());
+    }
     }
 }

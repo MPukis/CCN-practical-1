@@ -44,7 +44,7 @@ public class Practical2 {
 			System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
 		}
 		System.out.println("Total Fittnes: "+ population1.totalFittnes);
-		population1.selection(population1);
+		
 		/**  What would happen imho
 		 * 
 		 * what do we have(up until this point)----> population with certain fittnes values
@@ -54,6 +54,13 @@ public class Practical2 {
 		 * reproduction()<- I have no idea how we gona do this
 		 * loop starts again
 		 */
-		
+		while(Population.HighestFittnes!=11){
+			population1.selection(population1);
+			HeapSort.sort(population1.population);
+			for (int i = 0; i < population1.populationSize(); i++) {
+				System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
+			}
+			System.out.println("Total Fittnes: "+ population1.totalFittnes);
+		}
 	}
 }
