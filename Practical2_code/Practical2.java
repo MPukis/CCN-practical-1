@@ -40,6 +40,7 @@ public class Practical2 {
 		population1.initialize();
 		// What does your population look like?
 		HeapSort.sort(population1.population);
+
 		for (int i = 0; i < population1.populationSize(); i++) {
 			System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
 		}
@@ -54,13 +55,15 @@ public class Practical2 {
 		 * reproduction()<- I have no idea how we gona do this
 		 * loop starts again
 		 */
-		while(Population.HighestFittnes!=11){
+		while(Population.HighestFittnes<11){
+			System.out.println("---------------------------------");
 			population1.selection(population1);
 			HeapSort.sort(population1.population);
-			for (int i = 0; i < population1.populationSize(); i++) {
-				System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
-			}
-			System.out.println("Total Fittnes: "+ population1.totalFittnes);
+			// for (int i = 0; i < population1.populationSize(); i++) {
+			// 	System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
+			// }
+			System.out.println("Total Fittnes: "+ population1.totalFittnes+"Current best solution: " + Population.bestInClass.genoToPhenotype()+" "+Population.HTotalFittnes);
+			
 		}
 	}
 }

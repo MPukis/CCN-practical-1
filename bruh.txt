@@ -1,1 +1,11 @@
 null
+  // System.out.println("---------------------------------------------------------------------");
+      for (int i = 0; i < RWheel.length; i++) {
+        System.out.println(i+" "+ RWheel[i]+" "+pop.population[RWheel[i]].genoToPhenotype());
+      }
+      for (int i = 0; i < pop.population.length; i++) {
+        System.out.println(i+" "+pop.population[i].genoToPhenotype());
+      }
+        totalFittnes=0;
+
+        
