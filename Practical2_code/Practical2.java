@@ -30,7 +30,7 @@ public class Practical2 {
 		}
 		alphabet[26] = ' ';
 		Population population1= new Population(popSize);
-		DataGathering wirter = new DataGathering(popSize, population1, popSize, false, "data.txt", "");
+		//DataGathering wirter = new DataGathering(popSize, population1, popSize, false, "data.txt", "");
 		//----------------------------------------------
 		//actual code
 		
@@ -39,9 +39,12 @@ public class Practical2 {
 		
 		population1.initialize();
 		// What does your population look like?
+		HeapSort.sort(population1.population);
 		for (int i = 0; i < population1.populationSize(); i++) {
-			System.out.println(population1.population[i].genoToPhenotype());
+			System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
 		}
+		System.out.println("Total Fittnes: "+ population1.totalFittnes);
+		population1.selection(population1);
 		/**  What would happen imho
 		 * 
 		 * what do we have(up until this point)----> population with certain fittnes values

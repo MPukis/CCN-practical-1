@@ -3,6 +3,7 @@ public class Individual {
 	
 	char[] chromosome;
 	double fitness;
+	int ID;
 	
 	public Individual(char[] chromosome) {
 		this.chromosome = chromosome;
@@ -26,7 +27,12 @@ public class Individual {
 		this.fitness = fitness;
 	}
 	public void calculateFittnes(Individual ind){
-		//TODO
+		double b=1;
+		for (int i = 0; i < Practical2.TARGET.length(); i++) {
+			if(ind.getChromosome()[i]==Practical2.TARGET.charAt(i)){
+				fitness+=b;
+			}
+		}
 	}
 	
 	public String genoToPhenotype() {
