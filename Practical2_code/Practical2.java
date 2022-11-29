@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -19,20 +20,23 @@ public class Practical2 {
 
 	/**
 	 * @param args
+	 * @throws IOException
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		//---necessary variable initialization---------
 		int popSize = 100;
 		for (char c = 'A'; c <= 'Z'; c++) {
 			alphabet[c - 'A'] = c;
 		}
 		alphabet[26] = ' ';
+		Population population1= new Population(popSize);
+		DataGathering wirter = new DataGathering(popSize, population1, popSize, false, "data.txt", "");
 		//----------------------------------------------
 		//actual code
 		
 		//while loop?
 		// code bellow sholud be an else statement because population initialization only happens once  
-		Population population1= new Population(popSize);
+		
 		population1.initialize();
 		// What does your population look like?
 		for (int i = 0; i < population1.populationSize(); i++) {
