@@ -55,7 +55,7 @@ public class Practical2 {
 		 * reproduction()<- I have no idea how we gona do this
 		 * loop starts again
 		 */
-		while(Population.HighestFittnes<=10){
+		while(Population.HighestFittnes<=TARGET.length()-1){
 			population1.selection(population1);
 			HeapSort.sort(population1.population);
 			// for (int i = 0; i < population1.populationSize(); i++) {
