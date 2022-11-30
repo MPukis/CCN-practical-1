@@ -55,15 +55,16 @@ public class Practical2 {
 		 * reproduction()<- I have no idea how we gona do this
 		 * loop starts again
 		 */
-		while(Population.HighestFittnes<11){
-			System.out.println("---------------------------------");
+		while(Population.HighestFittnes<=10){
 			population1.selection(population1);
 			HeapSort.sort(population1.population);
 			// for (int i = 0; i < population1.populationSize(); i++) {
 			// 	System.out.println("ID: "+population1.population[i].ID+"| "+population1.population[i].genoToPhenotype()+" | "+population1.population[i].getFitness());
 			// }
-			System.out.println("Total Fittnes: "+ population1.totalFittnes+"Current best solution: " + Population.bestInClass.genoToPhenotype()+" "+Population.HTotalFittnes);
-			
+			//System.out.println("Total Fittnes: "+ population1.totalFittnes+"Current best solution: " + Population.bestInClass.genoToPhenotype()+" "+Population.HTotalFittnes +"best fitness");
+
 		}
+		System.out.println(population1.population[0].genoToPhenotype());
+		System.out.println(Population.numberGenerations);
 	}
 }
